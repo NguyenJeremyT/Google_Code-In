@@ -1,12 +1,12 @@
 function is_anagram(x, y)
-    if sort(split(x, "")) == sort(split(y, ""))
+	if sort(split(x, "")) == sort(split(y, ""))
 		return true end
 	return false
 end
 
 function download_words()
-    download("https://github.com/tk3369/words/raw/master/words.txt", "C:\\Users\\Jeremy\\Desktop\\Julia\\words.txt")
-	f = open("C:\\Users\\Jeremy\\Desktop\\Julia\\words.txt");
+	download("https://github.com/tk3369/words/raw/master/words.txt", "words.txt")
+	f = open("words.txt");
 	lines = readlines(f)
 	counter = 1
 	for l in lines
@@ -25,3 +25,5 @@ function find_anagrams(x)
 	end
 	return a
 end
+
+find_anagrams("iceman")
