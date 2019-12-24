@@ -13,8 +13,8 @@ function download_words()
 	lines = readlines(f)
 
 	# iterates through the array and lowercases each word
-	for i in lines
-		lowercase(i)
+	for i = 1:size(lines)[1]
+		lines[i] = lowercase(lines[i])
 	end
 	return lines
 end
